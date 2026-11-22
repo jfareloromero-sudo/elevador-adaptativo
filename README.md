@@ -78,4 +78,12 @@ Proyecto académico desarrollado como parte del proceso de formación en Ingenie
 
 **Nota:** Este prototipo tiene fines académicos y de simulación. No está certificado para controlar elevadores reales.
 
-**PEGA_AQUI_TU_ENLACE_:** https://wokwi.com/projects/481427909843398657
+**Enlace de simulación del proyecto:** 
+
+https://wokwi.com/projects/481427909843398657
+
+Plataforma utilizada: Wokwi.
+
+Microcontrolador: Arduino Uno.
+
+Lenguaje de programación: C++. 
