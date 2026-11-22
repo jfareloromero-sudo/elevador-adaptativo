@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "author": "Prototipo elevador adaptativo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -90, "left": -190, "attrs": { "value": "300" } },
+    { "type": "wokwi-servo", "id": "servo1", "top": -100, "left": 250, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 180, "left": 230, "attrs": { "pins": "i2c" } },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": -170, "left": -160, "attrs": { "color": "blue", "label": "Piso 1" } },
+    { "type": "wokwi-pushbutton", "id": "btn2", "top": -170, "left": -70, "attrs": { "color": "green", "label": "Piso 2" } },
+    { "type": "wokwi-pushbutton", "id": "btn3", "top": -170, "left": 20, "attrs": { "color": "yellow", "label": "Piso 3" } },
+    { "type": "wokwi-pushbutton", "id": "btn4", "top": -170, "left": 110, "attrs": { "color": "red", "label": "Inundacion" } },
+    { "type": "wokwi-led", "id": "led1", "top": 40, "left": 300, "attrs": { "color": "green" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 90, "left": 300, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led2", "top": 40, "left": 370, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 90, "left": 370, "attrs": { "value": "220" } },
+    { "type": "wokwi-buzzer", "id": "buzz1", "top": 100, "left": 450, "attrs": {} }
+  ],
+  "connections": [
+    [ "pot1:VCC", "uno:5V", "red", [] ],
+    [ "pot1:GND", "uno:GND.1", "black", [] ],
+    [ "pot1:SIG", "uno:A0", "green", [] ],
+
+    [ "servo1:PWM", "uno:9", "orange", [] ],
+    [ "servo1:V+", "uno:5V", "red", [] ],
+    [ "servo1:GND", "uno:GND.2", "black", [] ],
+
+    [ "lcd1:SDA", "uno:A4", "green", [] ],
+    [ "lcd1:SCL", "uno:A5", "blue", [] ],
+    [ "lcd1:VCC", "uno:5V", "red", [] ],
+    [ "lcd1:GND", "uno:GND.3", "black", [] ],
+
+    [ "btn1:1.l", "uno:3", "blue", [] ],
+    [ "btn1:2.l", "uno:GND.1", "black", [] ],
+    [ "btn2:1.l", "uno:4", "blue", [] ],
+    [ "btn2:2.l", "uno:GND.1", "black", [] ],
+    [ "btn3:1.l", "uno:5", "blue", [] ],
+    [ "btn3:2.l", "uno:GND.1", "black", [] ],
+    [ "btn4:1.l", "uno:2", "blue", [] ],
+    [ "btn4:2.l", "uno:GND.1", "black", [] ],
+
+    [ "uno:6", "led1:A", "green", [] ],
+    [ "led1:C", "r1:1", "black", [] ],
+    [ "r1:2", "uno:GND.1", "black", [] ],
+    [ "uno:7", "led2:A", "green", [] ],
+    [ "led2:C", "r2:1", "black", [] ],
+    [ "r2:2", "uno:GND.1", "black", [] ],
+
+    [ "buzz1:1", "uno:8", "purple", [] ],
+    [ "buzz1:2", "uno:GND.1", "black", [] ]
+  ],
+  "dependencies": {}
+}
