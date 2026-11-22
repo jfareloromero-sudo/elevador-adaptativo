@@ -77,3 +77,5 @@ Proyecto académico desarrollado como parte del proceso de formación en Ingenie
 **Repositorio:** GitHub - elevador-adaptativo.
 
 **Nota:** Este prototipo tiene fines académicos y de simulación. No está certificado para controlar elevadores reales.
+
+**PEGA_AQUI_TU_ENLACE_:** https://wokwi.com/projects/481427909843398657
